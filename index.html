@@ -4,165 +4,363 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-pink.css">
-      
-    <title>Tam Nguyen's Portfolio</title>
-    <style>
-        body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
-        /* Set sidebar width */
-        .w3-sidebar{width: 120px;}
-        /* Add margin for #main equal sidebar's margin */
-        #main{margin-left: 120px;}
-        /* Remove margins from "page content" on small screens */
-        @media only screen and (max-width: 600px) {#main {margin-left: 0}}
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <title>2HAT Store|Phone and more</title>
 </head>
-<body class="w3-theme-l4">
-    <!-- Sidebar - hidden on small screen -->
-    <div class="w3-sidebar w3-bar-block w3-hide-small w3-theme-l2 w3-center w3-small" >
-        <img src="./assets/img/portrait.jpg" class="w3-opacity" style="width:100%">
-        <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-red w3-hover-opacity">
-          <i class="fa fa-home w3-xxlarge"></i>
-          <p>HOME</p>
-        </a>
-        <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-red w3-hover-opacity">
-          <i class="fa fa-user w3-xxlarge"></i>
-          <p>ABOUT</p>
-        </a>
-        <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-red w3-hover-opacity">
-          <i class="fa fa-picture-o w3-xxlarge"></i>
-          <p>PHOTOS</p>
-        </a>
-        <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-red w3-hover-opacity">
-          <i class="fa fa-envelope w3-xxlarge"></i>
-          <p>CONTACT</p>
-        </a>
+<body>
+    <div class="header">
+        <div class="container">
+            <!-- Navbar -->
+            <div class="navbar">
+                <div class="logo">
+                    <img src="images/2hat.png" width="125px" height="">
+                </div>
+                <nav>
+                    <ul id="menuItems">
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Products</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Contact</a></li>
+                        <li><a href="">Account</a></li>
+                    </ul>
+                </nav>
+                <img src="images/cart.png" width="30px" height="30px">
+                <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+            </div>
+            <!-- Banner -->
+            <div class="row">
+                <div class="col-2">
+                    <h1>Leading in your Style!</h1>
+                    <p>When you change your thoughts, remember to also change your world.</p>
+                    <a href="" class="btn">Explore Now &#10143;</a>
+                </div>
+                <div class="col-2">
+                    <img src="images/image1.png" alt="">
+                </div>
+            </div>
+        </div>
     </div>
-
-    <!-- Navbar - showed on small screen -->
-    <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
-        <div class="w3-bar w3-theme-l4 w3-opacity w3-hover-opacity-off w3-center w3-small">
-        <a href="#" class="w3-bar-item w3-button w3-hover-red" style="width:25% !important">HOME</a>
-        <a href="#about" class="w3-bar-item w3-button w3-hover-red w3-hover-opacity" style="width:25% !important">ABOUT</a>
-        <a href="#photos" class="w3-bar-item w3-button w3-hover-red w3-hover-opacity" style="width:25% !important">PHOTOS</a>
-        <a href="#contact" class="w3-bar-item w3-button w3-hover-red w3-hover-opacity" style="width:25% !important">CONTACT</a>
-        </div>
-    </div>
-
-    <!-- Page content -->
-    <div id="main" class="w3-padding-large">
-        <!-- Header/Home section -->
-        <div class="w3-container w3-center w3-padding-32" id="home">
-            <h1 class="w3-jumbo"><span class="w3-hide-small">I'm </span>Tam Nguyen.</h1>
-            <p>Foreign language teacher and interpreter</p>
-            <img src="./assets/img/portrait.jpg" alt="" class="w3-image" width="1020" height="1020">
-        </div>
-        
-        <!-- About section -->
-        <div class="w3-content w3-text-gray w3-justify w3-padding-64" id="about">
-            <h2 class="w3-text-black">Tam Nguyen</h2>
-            <hr style="width: 200px;">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non natus quos porro? Iste a quo temporibus provident ea odit cupiditate consectetur voluptatem excepturi sapiente deleniti, expedita qui hic natus assumenda!
-            Id voluptate quasi architecto obcaecati blanditiis vero, laborum similique laboriosam ullam, minus dolor facilis illum! Maxime quas, nemo mollitia, voluptates eligendi culpa nulla modi vitae voluptas, quia rem eius quo?
-            Obcaecati aperiam debitis temporibus accusantium perferendis, dicta nostrum repudiandae eos quis placeat quas facere cumque neque id exercitationem dolore, earum quasi, alias voluptatibus illum harum eligendi. Ducimus repellat provident dolore.
-            Veniam id in porro consequatur esse maxime recusandae eum, error beatae aperiam reprehenderit repudiandae optio, iusto incidunt atque, soluta necessitatibus? Corporis nulla voluptate alias est dicta iusto odit voluptatem vero.
-            Dolor itaque quidem modi illum! Excepturi id enim eum tempora eius cumque dolor error iure sed explicabo inventore quasi hic, eveniet officia? Quos similique provident, veritatis voluptatem soluta aliquid numquam?</p>
-            <h3 class="w3-padding-16 w3-text-black">My Skills</h3>
-            <h4 class="w3-wide">Russian fluency</h4>
-            <div class="w3-light-grey">
-                <div class="w3-container w3-green w3-center" style="width:75%">75%</div>
-            </div>
-            <h4 class="w3-wide">Chinese fluency</h4>
-            <div class="w3-light-grey">
-                <div class="w3-container w3-green w3-center" style="width:100%">100%</div>
-            </div>
-            <h4 class="w3-wide">Working with Microsoft Office</h4>
-            <div class="w3-light-grey">
-                <div class="w3-container w3-green w3-center" style="width:75%">75%</div>
-            </div>
-            <br>
-            <div class="w3-row w3-center w3-padding-32 w3-section w3-white">
-                <div class="w3-quarter">
-                    <span class="w3-xlarge">69+</span><br>
-                    Projects done
+    
+    <!-- Featured categories -->
+    <div class="categories">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-3">
+                    <img src="images/category-1.jpg" alt="">
                 </div>
-                <div class="w3-quarter">
-                    <span class="w3-xlarge">69+</span><br>
-                    Happy clients
+                <div class="col-3">
+                    <img src="images/category-2.jpg" alt="">
                 </div>
-                <div class="w3-quarter">
-                    <span class="w3-xlarge">69+</span><br>
-                    Professional skills
-                </div>
-                <div class="w3-quarter">
-                    <span class="w3-xlarge">69+</span><br>
-                    Companies
-                </div>
-            </div>
-            <button class="w3-button w3-white w3-padding-large w3-center w3-section">
-                <i class="fa fa-download "></i> <a href="https://cdn.fbsbx.com/v/t59.2708-21/178572166_501634107707015_1616395333969863089_n.pdf/CV-NGUY%E1%BB%84N-TH%E1%BB%8A-T%C3%82M-NVHC.pdf?_nc_cat=108&ccb=1-3&_nc_sid=0cab14&_nc_ohc=dN7ZA10lOI4AX9QWIX1&_nc_ht=cdn.fbsbx.com&oh=dadb605ab9a922fbaf111e83e5352476&oe=60A67991&dl=1" style="text-decoration: none;">Download Resume</a>
-            </button>
-        </div>
-
-        <!-- My Photos -->
-        <div id="photos" class="w3-content ">
-            <h2 class="w3-text-black">My Photos</h2>
-            <hr style="width: 200px;">
-            <!-- Photos' grid -->
-            <div class="w3-row-padding" style="margin:0 -16px">
-                <div class="w3-half ">
-                    <img src="./assets/img/photo2.jpg" alt="" style="width: 500px;" class="w3-padding-small">
-                    <img src="./assets/img/photo5.jpg" alt="" style="width: 500px;" class="w3-padding-small">
-                    <img src="./assets/img/photo10.jpg" alt="" style="width: 500px;" class="w3-padding-small">
-                    <img src="./assets/img/photo1.jpg" alt="" style="width: 500px;" class="w3-padding-small">
-                </div>
-                <div class="w3-half">
-                    <img src="./assets/img/rsz_2photo7.jpg" alt="" style="width: 500px;" class="w3-padding-small">
-                    <img src="./assets/img/rsz_photo4.jpg" alt="" style="width: 500px; height: 329px;" class="w3-padding-small" >
-                    <img src="./assets/img/photo8.jpg" alt="" style="width: 500px;" class="w3-padding-small">
+                <div class="col-3">
+                    <img src="images/category-3.jpg" alt="">
                 </div>
             </div>
         </div>
-
-         <!-- Contact Section -->
-        <div class="w3-padding-64 w3-content w3-text-black" id="contact">
-            <h2 >Contact Me</h2>
-            <hr style="width:200px" class="w3-opacity">
-
-            <div class="w3-section">
-            <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Hai Duong, Vietnam</p>
-            <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: +84 967 514 003</p>
-            <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: tamnguyen.vnu@gmail.com</p>
-            </div><br>
-            <p>Let's get in touch. Send me a message:</p>
-
-            <form action="/action_page.php" target="_blank">
-            <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
-            <p><input class="w3-input w3-padding-16" type="email" placeholder="Email" required name="Email"></p>
-            <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="Subject"></p>
-            <p><input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message"></p>
-            <p>
-                <button class="w3-button w3-light-grey w3-padding-large" type="submit">
-                <i class="fa fa-paper-plane"></i> SEND MESSAGE
-                </button>
-            </p>
-            </form>
-        <!-- End Contact Section -->
-        </div>
-        <footer class="w3-content w3-text-grey w3-xlarge">
-            <a href="https://www.facebook.com/tamnguyen.vnu"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
-            <a href="https://www.instagram.com/tamnguyen.vnu/"><i class="fa fa-instagram w3-hover-opacity"></i></a>
-        </footer>    
-          <!-- End footer -->
-    <!-- END PAGE CONTENT -->
     </div>
 
     
-    
+    <div class="small-container">
+        <!-- Featured products -->
+        <h2 class="title">Featured Products</h2>
+        <div class="row">
+            <div class="col-4">
+                <img src="images/product-1.jpg" alt="">
+                <h4>Red Printed T-shirt</h4>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <img src="images/product-2.jpg" alt="">
+                <h4>Red Printed T-shirt</h4>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <img src="images/product-3.jpg" alt="">
+                <h4>Red Printed T-shirt</h4>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <img src="images/product-4.jpg" alt="">
+                <h4>Red Printed T-shirt</h4>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p>$50.00</p>
+            </div>
+        </div>
 
+        <!-- Latest products -->
+        <h2 class="title">Latest Products</h2>
+        <div class="row">
+            <div class="col-4">
+                <img src="images/product-5.jpg" alt="">
+                <h4>Red Printed T-shirt</h4>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <img src="images/product-6.jpg" alt="">
+                <h4>Red Printed T-shirt</h4>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <img src="images/product-7.jpg" alt="">
+                <h4>Red Printed T-shirt</h4>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <img src="images/product-8.jpg" alt="">
+                <h4>Red Printed T-shirt</h4>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p>$50.00</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <img src="images/product-9.jpg" alt="">
+                <h4>Red Printed T-shirt</h4>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <img src="images/product-10.jpg" alt="">
+                <h4>Red Printed T-shirt</h4>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <img src="images/product-11.jpg" alt="">
+                <h4>Red Printed T-shirt</h4>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <img src="images/product-12.jpg" alt="">
+                <h4>Red Printed T-shirt</h4>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p>$50.00</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Offer -->
+    <div class="offer">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="images/exclusive.png" class="offer-img">
+                </div>
+                <div class="col-2">
+                    <p>Exclusively Available on 2HATSTORE</p>
+                    <h1>Smart Band 4</h1>
+                    <small>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem molestias consequatur error aperiam ipsa numquam voluptatibus pariatur ea fuga ullam? Fuga quo quos aperiam cumque, hic minus? Ad, enim repudiandae!
+                    Deserunt nobis libero illum esse beatae ipsa voluptatum doloremque nulla saepe accusantium reiciendis aut tempora veritatis facere autem, et laborum iusto? Voluptatem excepturi possimus molestias voluptate nemo, iste quis inventore.</small><br>
+                    <a href="" class="btn">Buy Now &#8594;</a>
+                </div>  
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonial -->
+    <div class="testimonial">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-3">
+                    <i class="fas fa-quote-right"></i>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam excepturi, eum, consequatur eveniet hic omnis reprehenderit consectetur architecto ea autem deserunt ipsum ipsa repellendus nihil saepe dolore suscipit dolores provident.</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <img src="images/user-1.png" alt="">
+                    <h3>Sean Parker</h3>
+                </div>
+                <div class="col-3">
+                    <i class="fas fa-quote-right"></i>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam excepturi, eum, consequatur eveniet hic omnis reprehenderit consectetur architecto ea autem deserunt ipsum ipsa repellendus nihil saepe dolore suscipit dolores provident.</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <img src="images/user-2.png" alt="">
+                    <h3>Sean Parker</h3>
+                </div>
+                <div class="col-3">
+                    <i class="fas fa-quote-right"></i>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam excepturi, eum, consequatur eveniet hic omnis reprehenderit consectetur architecto ea autem deserunt ipsum ipsa repellendus nihil saepe dolore suscipit dolores provident.</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <img src="images/user-3.png" alt="">
+                    <h3>Sean Parker</h3>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Brands -->
+    <div class="brands">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-5">
+                    <img src="images/logo-godrej.png" alt="">
+                </div>
+                <div class="col-5">
+                    <img src="images/logo-oppo.png" alt="">
+                </div>
+                <div class="col-5">
+                    <img src="images/logo-coca-cola.png" alt="">
+                </div>
+                <div class="col-5">
+                    <img src="images/logo-paypal.png" alt="">
+                </div>
+                <div class="col-5">
+                    <img src="images/logo-philips.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App </h3>
+                    <p>Download App for Android and iOS mobile phone</p>
+                    <div class="app-logo">
+                        <img src="images/play-store.png" alt="">
+                        <img src="images/app-store.png" alt="">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="images/2hat-white.png" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis optio nihil alias.</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Instagram</li>
+                        <li>Twitter</li>
+                        <li>YouTube</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2021 - 2 Sem. Aptech Project</p>
+        </div>
+    </div>
+
+    <!-- JS for toggle menu -->
+    <script>
+        var menuItems = document.getElementById("menuItems");
+        menuItems.style.maxHeight="0px";
+        function menutoggle(){
+            if(menuItems.style.maxHeight == "0px")
+            {
+                menuItems.style.maxHeight="200px";
+            }else{
+                menuItems.style.maxHeight="0px";
+            }
+        }
+    </script>
 </body>
 </html>
